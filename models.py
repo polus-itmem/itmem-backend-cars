@@ -5,5 +5,19 @@ from strenum import StrEnum
 from pydantic import BaseModel
 
 
-class Test(BaseModel):
-    data: str
+class ModelId(BaseModel):
+    id: int
+
+
+class CarType(BaseModel):
+    description: str
+
+
+class Car(BaseModel):
+    id: int
+
+    park: str
+    type: CarType
+    name: str
+    number: str
+    driver_id: int
